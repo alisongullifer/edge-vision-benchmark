@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-10-12T20:58:56.779824-07:00",
+  "run": 2,
+  "background_activity": "VS Code and Edge open; no downloads noticed; plugged in; Balanced power mode; CPU approximately 8% before run",
+  "retrained": false,
+  "quantization_scope": "Linear layers only; convolutions FP32",
+  "settings": {
+    "threads": 1,
+    "quantization_engine": "onednn",
+    "batch_size": 1,
+    "warmups": 30,
+    "rounds": 5,
+    "repeats_per_round": 200,
+    "test_image_index": 618
+  },
+  "timing_order": [
+    "cnn_linear_int8",
+    "cnn_fp32"
+  ],
+  "results": [
+    {
+      "model": "cnn_linear_int8",
+      "latency_median_ms": 0.2062,
+      "latency_p95_ms": 0.27045499999999995,
+      "round_medians_ms": [
+        0.21,
+        0.20679999999999998,
+        0.20375,
+        0.20365,
+        0.20450000000000002
+      ]
+    },
+    {
+      "model": "cnn_fp32",
+      "latency_median_ms": 0.0775,
+      "latency_p95_ms": 0.0962,
+      "round_medians_ms": [
+        0.0767,
+        0.07725,
+        0.07815,
+        0.0766,
+        0.07855000000000001
+      ]
+    }
+  ]
+}
