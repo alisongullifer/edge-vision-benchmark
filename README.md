@@ -3,6 +3,25 @@
 
 An AI-assisted machine learning project exploring convolutional neural networks (CNNs), model evaluation, dynamic quantization, and CPU inference performance.
 
+
+## Project Highlights
+
+This project examines CNN training, dynamic INT8 quantization, and CPU inference performance using handwritten-digit images.
+
+**Key Results**
+
+| Metric | Result |
+|---|---|
+| FP32 CNN Test Accuracy | 95.83% |
+| Quantized CNN Test Accuracy | 96.11% |
+| Model Storage Reduction | 46.4% |
+| Quantized Inference Latency | 3.33× slower than FP32 |
+
+**Key Finding:** Quantization significantly reduced model storage requirements but increased inference latency on my
+Windows laptop.
+
+All inference benchmarks were performed on a CPU, not dedicated edge AI hardware.
+
 ## Project Purpose
 
 I used this project to develop a practical understanding of machine learning concepts relevant to AI/ML engineering and edge inference.
@@ -10,7 +29,6 @@ I used this project to develop a practical understanding of machine learning con
 The project began with code generated with AI assistance. My work focused on setting up and executing the program on my laptop, studying its components, inspecting predictions and errors, running comparisons, interpreting measured results, and documenting what I learned.
 
 This is an educational benchmarking project, not a production application or a deployment to Qualcomm hardware.
-
 
 ## Development Environment
 
@@ -233,6 +251,21 @@ The project also includes inspection of incorrectly classified images.
 Reviewing these mistakes helped me understand that a model can produce a high softmax probability while still making an incorrect prediction.
 
 Softmax probabilities reflect the model's relative scores and do not guarantee that its prediction is correct.
+
+
+### Prediction Examples
+
+The following images were generated during the CNN inference
+demonstration.
+
+#### Single Prediction
+
+![CNN single digit prediction](results/demo/single_prediction.png)
+
+#### Classification Mistakes
+
+![CNN incorrectly classified handwritten digits](results/demo/prediction_mistakes.png)
+
 
 ## Project Files and Results
 
